@@ -21,7 +21,7 @@ export default function DashboardHeader() {
 
   return (
     <div 
-    className=" bg-white shadow-sm w-full ">
+    className=" bg-white shadow-sm w-full pb-4 ">
      <div className=" border-b shadow-sm">
   <div className=" relative mt-4 w-full max-w-5xl mx-auto font-sans overflow-hidden">
   <div 
@@ -67,7 +67,7 @@ export default function DashboardHeader() {
      </div>
 
      <div className="flex items-center justify-between gap-6 mt-4 w-full max-w-5xl mx-auto font-sans overflow-hidden">
-        <div>
+        <div className='text-left'>
           <h2 className="text-lg font-semibold">Welcome back, Alexandro 👋</h2>
           <p className="text-sm text-gray-500">There is the latest update for the last 7 days. Check now</p>
         </div>

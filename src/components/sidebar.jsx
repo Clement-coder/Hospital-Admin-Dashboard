@@ -5,7 +5,7 @@ import { MdDashboard } from "react-icons/md";
 
 const Sidebar = () => {
   return (
-    <div className="w-56 border-r h-full bg-white s p-5 overflow-y-auto scrollbar-hide ">
+    <div id='sideBarContent' className="w-56 border-r h-[1200px] text-left bg-white s p-5 overflow-y-auto scrollbar-hide">
       <div className="flex items-center space-x-2 mb-6">
     <img className="rounded-lg" width={30} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzXJYWrI0RAiRJIPFkXujwO64avZtKbJZatDmLeos-eFM-WTR" alt="logo" />
         <div className="text-black text-2xl font-medium">We<span className="font-normal">Care</span></div>
@@ -45,6 +45,8 @@ const SidebarItem = ({ icon: Icon, label, active }) => {
       <Icon className="text-gray-600 text-lg" />
       <span className="text-gray-700 font-normal">{label}</span>
     </li>
+
+    
   );
 };
 

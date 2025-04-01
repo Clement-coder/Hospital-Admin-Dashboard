@@ -20,6 +20,14 @@ const Progress = ({ value }) => (
     ></div>
   </div>
 );
+const ProgressBar = ({ value }) => (
+  <div className="w-full bg-teal-500 rounded-full h-2.5">
+    <div
+      className="bg-gray-200 h-2.5 rounded-full"
+      style={{ width: `${value}%` }}
+    ></div>
+  </div>
+);
 
 const Card = ({ children, className = "", ...props }) => (
   <div className={`bg-white shadow-md rounded-lg p-4 ${className}`} {...props}>
@@ -31,7 +39,7 @@ const DashboardCards = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-6 mt-10">
       {/* Overall Visitors Card */}
-      <Card className="bg-[teal] text-white p-4 rounded-xl shadow-lg">
+      <Card className="bg-teal-600 text-white p-4 rounded-xl shadow-lg">
         <div className="flex justify-between items-center">
           <h2 className="text-lg font-bold flex items-center gap-2">
             <FaHospitalUser className="text-teal"/> Overall Visitors
@@ -43,7 +51,7 @@ const DashboardCards = () => {
         <span className="text-sm bg-teal-500 px-2 py-1 rounded-xl">+15.2%</span>
        </div>
         <p className="mt-2 text-sm py-4">Data from 5,567 to 7,525 visitors</p>
-        <Progress value={30} className="mt-2" />
+        <ProgressBar value={70} className="mt-2" />
         <p className="mt-2 text-sm">1,345 today</p>
       </Card>
 
@@ -60,7 +68,7 @@ const DashboardCards = () => {
        <span className="text-sm bg-teal-100 px-2 py-1 rounded-xl text-teal-700">+10.4%</span>
        </div>
         <p className="mt-2 text-sm py-4">Increase in data by 500 patients</p>
-        <ResponsiveContainer width="100%" height={100}>
+        <ResponsiveContainer width="70%" height={100}>
           <BarChart data={data}>
             <XAxis dataKey="name" hide />
             <YAxis hide />
@@ -73,13 +81,13 @@ const DashboardCards = () => {
       {/* Surgery Card */}
       <Card className="bg-white p-4 rounded-xl shadow-lg">
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-bold flex items-center gap-2">
+          <h2 className="text-lg font-bold text-gray-500 flex items-center gap-2">
             <FaProcedures /> Surgery
           </h2>
           <span className="text-xl">⋯</span>
         </div>
      <div className="flex items-center gap-2">
-     <h1 className="text-4xl font-medium mt-2">523</h1>
+     <h1 className="text-4xl font-medium mt-2 ">523</h1>
      <span className="text-sm bg-teal-100 px-2 py-1 rounded-xl text-teal-700">+165</span>
      </div>
         <p className="mt-2 text-sm py-4">Data obtained from 10.2% to 15.7%</p>
@@ -90,7 +98,7 @@ const DashboardCards = () => {
       {/* Overall Rooms Card */}
       <Card className="bg-white p-4 rounded-xl shadow-lg">
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-bold flex items-center gap-2">
+          <h2 className="text-lg font-bold flex items-center gap-2 text-gray-500">
             <MdMeetingRoom /> Overall Rooms
           </h2>
           <span className="text-xl">⋯</span>

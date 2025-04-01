@@ -16,7 +16,10 @@ const App = () => {
      
      <div>
    <div className=" overflow-y-auto scrollbar-hide">
-   <Dashboardheader/>
+    <div className='space-y-10'>
+    <Dashboardheader/>
+
+    </div>
      <Dashboardcards/>
      <div className="flex justify-between">
      <PatientChart />

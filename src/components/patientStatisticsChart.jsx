@@ -15,7 +15,7 @@ const data = [
 const PatientStatisticsChart = () => {
   return (
     <div className="bg-white rounded-sm shadow-md w-[520px]">
-      <h2 className="text-lg p-6 font-semibold mb-4 flex items-center gap-2">
+      <h2 className="text-lg  text-gray-600 p-4 flex items-center gap-2">
       <FaHospitalUser />  Patient Statistics
       </h2>
       <ResponsiveContainer width="100%" height={300}>

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -20,8 +19,8 @@ const patientCalendar = () => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <div className="p-4 bg-white shadow-lg rounded-xl w-[520px]">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold p-4">
-          <Calendar/> Calendar
+          <h2 className="text-lg  text-gray-600 p-4 flex items-center gap-2">
+          <Calendar/> Calendar 
           </h2>
           <div className="flex gap-2">
             <span className="flex items-center gap-1 text-sm"><Circle size={10} className="text-green-500" /> Appointment</span>
